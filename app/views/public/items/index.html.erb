@@ -1,0 +1,18 @@
+<h2>商品一覧 (全<%= @items.size%>件)</h2>
+<div class="container">
+	<div class="row">
+
+
+			<% @items.each do |item| %>
+				<%= image_tag item.get_profile_image(300,300)%>
+			<div class="col-lg-3">
+				<%= item.name %><br>
+				 
+	
+				<%= item.price %>
+				  
+			</div>
+			<% end %>
+</div>
+<%= paginate @items %>
+	</div>
